@@ -13,7 +13,11 @@ class _Stagg_SState extends State<Stagg_S> {
     "assets/images/img1.jpg",
     "assets/images/img2.jpg",
     "assets/images/img3.webp",
-    "assets/images/img4.jpg"
+    "assets/images/img4.jpg",
+    "assets/images/img1.jpg",
+    "assets/images/img2.jpg",
+    "assets/images/img3.webp",
+    "assets/images/img4.jpg",
   ];
 
   @override
@@ -23,9 +27,14 @@ class _Stagg_SState extends State<Stagg_S> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          child: Column(
-            children: [],
-          ),
+          margin: EdgeInsets.all(10),
+          child: GridView.builder(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemCount: images.length,
+              itemBuilder: (context,index){
+                return Image.asset("${images[index]}");
+              }),
         ),
       ),
     );
