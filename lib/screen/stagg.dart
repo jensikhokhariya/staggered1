@@ -29,12 +29,13 @@ class _Stagg_SState extends State<Stagg_S> {
           width: double.infinity,
           margin: EdgeInsets.all(10),
           child: GridView.builder(
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              itemCount: images.length,
-              itemBuilder: (context,index){
-                return Image.asset("${images[index]}");
-              }),
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            itemCount: images.length,
+            itemBuilder: (context, index) {
+              return Image.asset("${images[index]}");
+            },
+          ),
         ),
       ),
     );
